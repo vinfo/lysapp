@@ -1,0 +1,61 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-globalization": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-timer": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-background-timer": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.tracking.lysapp"
+    }
+  }
+}

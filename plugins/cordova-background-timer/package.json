@@ -1,0 +1,39 @@
+{
+  "_from": "cordova-background-timer",
+  "_id": "cordova-background-timer@0.0.4",
+  "_inBundle": false,
+  "_integrity": "sha1-Xpe3AmyWwGc5+CgcjJ0FLBmkX3A=",
+  "_location": "/cordova-background-timer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-background-timer",
+    "name": "cordova-background-timer",
+    "escapedName": "cordova-background-timer",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-background-timer/-/cordova-background-timer-0.0.4.tgz",
+  "_shasum": "5e97b7026c96c06739f8281c8c9d052c19a45f70",
+  "_spec": "cordova-background-timer",
+  "_where": "C:\\Users\\vivalencia\\Documents\\Sitios\\limpiezaysolucionesintegradas\\app\\lysapp",
+  "bundleDependencies": false,
+  "cordova_name": "BackgroundTimer",
+  "deprecated": false,
+  "description": "BackgroundTimer Plugin",
+  "keywords": [
+    "resources"
+  ],
+  "license": "Apache License Version 2.0",
+  "name": "cordova-background-timer",
+  "platforms": [
+    "android"
+  ],
+  "version": "0.0.4"
+}
