@@ -37,16 +37,7 @@
     "cordova-plugin-vibration": {
       "PACKAGE_NAME": "com.tracking.lysapp"
     },
-    "cordova-plugin-timer": {
-      "PACKAGE_NAME": "com.tracking.lysapp"
-    },
-    "cordova-background-timer": {
-      "PACKAGE_NAME": "com.tracking.lysapp"
-    },
-    "cordova-plugin-background-mode": {
-      "PACKAGE_NAME": "com.tracking.lysapp"
-    },
-    "cordova-plugin-badge": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.tracking.lysapp"
     }
   },

@@ -2,14 +2,15 @@
 <widget id="com.tracking.lysapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>LYStrack</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+       Sistema de servicios en línea de Limpieza y Soluciones Integradas.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="victor.valencia@gmail.com" href="https://vinfoweb.com">
+        Vinfo
     </author>
     <content src="index.html" />
-    <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />   
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.2.4" />
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.4.1" />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.4.3" />
@@ -21,6 +22,10 @@
     <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.7.1" />
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.3.3" />
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.5" />
+    <plugin name="cordova-plugin-background-mode" source="npm" spec="~0.7.3" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.3.4" />
+    <plugin name="cordova-plugin-badge" source="npm" spec="~0.8.8" />
+    <plugin name="cordova-background-timer" source="npm" spec="~0.0.4" />    
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
@@ -47,6 +52,8 @@
         <splash height="1280" platform="wp8" src="www/res/screen/wp8/screen-portrait.jpg" width="768" />
     </platform>
     <access origin="*" />
+    <access origin="https://limpiezaysoluciones.com.co" />
+    <access origin="*.limpiezaysoluciones.com.co" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

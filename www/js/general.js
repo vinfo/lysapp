@@ -7,7 +7,43 @@ var app = {
     },
     onDeviceReady: function() {
       app.receivedEvent('deviceready');
-      cordova.plugins.backgroundMode.enable();
+      checkConnection();
+      var eventCallback = function() {
+          console.log("Timer inicializado");
+          GPS();
+      }
+      var successCallback = function() {
+          console.log("Timer completo");
+          GPS();
+      }
+      var errorCallback = function(e) {
+          console.log("Timer error");
+      }
+      var settings = {
+          timerInterval: 60000, // interval between ticks of the timer in milliseconds (Default: 60000)
+          startOnBoot: true, // enable this to start timer after the device was restarted (Default: false)
+          stopOnTerminate: true, // set to true to force stop timer in case the app is terminated (User closed the app and etc.) (Default: true)
+          hours: -1, // delay timer to start at certain time (Default: -1)
+          minutes: 0, // delay timer to start at certain time (Default: -1)
+      }
+      window.BackgroundTimer.onTimerEvent(eventCallback); // subscribe on timer event
+      // timer will start at 12:00
+      window.BackgroundTimer.start(successCallback, errorCallback, settings);
+
+    cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
+    // Enable background mode
+    cordova.plugins.backgroundMode.enable();
+
+    // Called when background mode has been activated
+    cordova.plugins.backgroundMode.onactivate = function () {
+        setTimeout(function () {
+            // Modify the currently displayed notification
+            cordova.plugins.backgroundMode.configure({
+                text:'Running in background for more than 5s now.'
+            });
+            GPS();
+        }, 5000);
+    }      
     },
     receivedEvent: function(id) {
       GPS();
@@ -32,18 +68,11 @@ var app = {
           registerFormat($(this).serialize());
         }
         event.preventDefault();
-      });
-      cordova.plugins.backgroundMode.on('activate', function () {
-          setInterval(function () {
-              cordova.plugins.notification.badge.increase();
-          },3000);
-      });
-      cordova.plugins.backgroundMode.on('deactivate', function () {
-          cordova.plugins.notification.badge.clear();
-      });      
+      });     
     }
   };
 var onSuccess = function(position) {
+  checkConnection();
   $(".coordinates").html("Coord: "+position.coords.latitude+"-"+position.coords.longitude);
   var id_u=localStorage.getItem('id_u');
   $.ajax({ 
@@ -58,7 +87,7 @@ var onSuccess = function(position) {
 };
 function onError(error) {
   alert('Error GPS - code: '    + error.code    + '\n' +
-    'message: ' + error.message + '\n');
+    'mensaje: ' + error.message + '\n');
 }
 function GPS(){
   navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -123,3 +152,13 @@ function registerFormat(form){
     }           
   });
 }
+function checkConnection() {
+    var networkState = navigator.connection.type;
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.NONE]     = 'No network connection';
+    if(states[networkState]=="Unknown connection"||states[networkState]=="No network connection"){
+      alert("Conexión a Internet no disponible");
+      window.location.replace("index.html");
+    }    
+} 

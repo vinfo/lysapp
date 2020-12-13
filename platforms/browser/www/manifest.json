@@ -4,8 +4,8 @@
   "name": "LYStrack",
   "short_name": "LYStrack",
   "version": "com.tracking.lysapp",
-  "description": "Hello World sample application that responds to the deviceready event.",
-  "author": "PhoneGap Team",
+  "description": "Sistema de servicios en línea de Limpieza y Soluciones Integradas.",
+  "author": "Vinfo",
   "icons": [],
   "start_url": "index.html"
 }

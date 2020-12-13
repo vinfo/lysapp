@@ -99,7 +99,19 @@ h1 {
     display:none;
     cursor: pointer;
 }
-
+.btton {
+    background-color:#4B946A;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+#identification{
+  padding:4px;
+  border-radius:5px;
+  margin:20px 0;
+  text-align:center;
+  width:220px;
+  height:40px;
+}
 @keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
